@@ -1,0 +1,30 @@
+name: tile-map-proxy-with-proxy
+
+#  `version` is obsolete
+# version: '3.4'
+
+services:
+  tilemapproxy:
+    image: tilemapproxy
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - HTTP_PROXY=http://v2ray:10809
+      - HTTPS_PROXY=http://v2ray:10809
+      - HOST=0.0.0.0
+    ports:
+      # local:container
+      - 3000:3000
+
+    restart: always
+    depends_on:
+      - v2ray
+
+    command: node ./dist/index.js
+
+networks:
+  default:
+    driver: bridge

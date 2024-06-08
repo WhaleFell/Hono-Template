@@ -1,0 +1,32 @@
+name = "tile-map-proxy"
+compatibility_date = "2023-12-01"
+main = "./src/index.ts"
+
+[site]
+# static directory
+bucket = "./public"
+
+[dev]
+ip = "0.0.0.0"
+port = 8080
+local_protocol = "http"
+
+
+# [vars]
+# MY_VAR = "my-variable"
+
+# [[kv_namespaces]]
+# binding = "MY_KV_NAMESPACE"
+# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# [[r2_buckets]]
+# binding = "MY_BUCKET"
+# bucket_name = "my-bucket"
+
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "my-database"
+# database_id = ""
+
+# [ai]
+# binding = "AI"
