@@ -6,8 +6,8 @@
     "node:dev": "tsx  --watch ./src/node-runner.ts",
     "node:build":"npx esbuild ./src/node-runner.ts --bundle --minify --packages=external --drop:debugger --drop:console --outfile=./dist/index.js --platform=node --format=esm --tree-shaking=true",
     "node:run":"node ./dist/index.js",
-    "vercel:build": "echo 'text'",
-    "vercel:dev": "npx esbuild ./src/vercel-runner.ts --bundle --minify --outfile=./api/index.js --platform=node --format=esm --tree-shaking=true && vercel dev --listen 0.0.0.0:5000"
+    "vercel:build": "npx esbuild ./src/vercel-runner.ts --bundle --minify --outfile=./dist/index.js --platform=node --format=esm --tree-shaking=true && node addConfig.js ./dist/index.js",
+    "vercel:dev": "npx esbuild ./src/vercel-runner.ts --bundle --minify --outfile=./dist/index.js --platform=node --format=esm --tree-shaking=true && vercel dev --listen 0.0.0.0:5000"
   },
   "dependencies": {
     "@hono/node-server": "^1.11.1",
