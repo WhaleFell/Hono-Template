@@ -1,10 +1,9 @@
 {
-  "version": 2,
   "buildCommand": "pnpm run vercel:build",
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "dist/index.js"
+      "destination": "/dist"
     }
   ]
 }
