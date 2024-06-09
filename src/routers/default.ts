@@ -4,7 +4,7 @@ import { getRuntimeKey } from "hono/adapter"
 
 import { StatusCode } from "hono/utils/http-status"
 import { customFetch, mergeHeaders } from "../utils/request"
-import { validatorQueryURLMiddleware } from "@/utils/middleware"
+import { validatorQueryURLMiddleware } from "../utils/middleware"
 
 const defaultRoute = new Hono()
 
