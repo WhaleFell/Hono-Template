@@ -1,6 +1,6 @@
 // Running Hono in Vercel.
-import app from './index'
-import { handle } from '@hono/node-server/vercel'
+import { app } from "./index"
+import { handle } from "@hono/node-server/vercel"
 
 // https://github.com/vercel/ai/issues/239#issuecomment-1636264346
 // NOTE:

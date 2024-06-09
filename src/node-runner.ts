@@ -1,6 +1,6 @@
 // Running Hono in Node.js with an Node.js adapter.
 // https://github.com/honojs/node-server
-import app from "./index"
+import { app } from "./index"
 import { serve } from "@hono/node-server"
 import { setGlobalDispatcher, ProxyAgent } from "undici"
 import { config } from "dotenv"
@@ -25,9 +25,9 @@ import { existsSync } from "fs"
 const envFilePath = path.resolve(".env")
 console.log(`.env file path: ${envFilePath}`)
 
-// 判断 .env 文件是否存在
+// check if .env file exists
 if (existsSync(envFilePath)) {
-  // 加载 .env 文件中的环境变量
+  // load .env file
   config({ path: envFilePath })
   console.log(".env file found and loaded")
 } else {

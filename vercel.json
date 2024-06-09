@@ -1,9 +1,11 @@
 {
-  "buildCommand": "pnpm run vercel:build",
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/api"
+      "destination": "./index.ts"
     }
-  ]
+  ],
+  "engines": {
+    "node": "20.x"
   }
+}
