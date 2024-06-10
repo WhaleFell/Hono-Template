@@ -1,4 +1,4 @@
-name = "tile-map-proxy"
+name = "Hono-Template"
 compatibility_date = "2023-12-01"
 main = "./src/index.ts"
 
