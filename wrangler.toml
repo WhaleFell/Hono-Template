@@ -1,4 +1,5 @@
-name = "Hono-Template"
+# Expected "name" to be of type string, alphanumeric and lowercase with dashes only
+name = "hono-template"
 compatibility_date = "2023-12-01"
 main = "./src/index.ts"
 
