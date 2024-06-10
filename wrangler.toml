@@ -2,6 +2,7 @@
 name = "hono-template"
 compatibility_date = "2023-12-01"
 main = "./src/index.ts"
+account_id = "2259a639d5e9a0c2d908f4c8a85fae56"
 
 [site]
 # static directory

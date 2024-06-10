@@ -5,7 +5,7 @@ import { exceptionHandler } from "./exception"
 import defaultRoute from "./routers/default"
 import { anyCorsMiddleware } from "./utils/middleware"
 
-export const app = new Hono({ strict: false })
+const app = new Hono({ strict: false })
 
 // cors middleware
 app.use(anyCorsMiddleware)
@@ -21,3 +21,5 @@ exceptionHandler(app)
 
 // add custom routes here
 app.route("/", defaultRoute)
+
+export default app
